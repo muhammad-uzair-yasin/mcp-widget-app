@@ -16,8 +16,6 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd /root/mcp-widget-app
-            git remote set-url origin https://${{ secrets.GH_TOKEN }}@github.com/muhammad-uzair-yasin/mcp-widget-app.git
             git pull origin master
-            git remote set-url origin https://github.com/muhammad-uzair-yasin/mcp-widget-app.git
             npm install
             npm run build
